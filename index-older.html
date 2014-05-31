@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+layout: true
+
+---
+
+# Making games with Clojurescript
+Slides: [cblop.github.io/clojure-dojo-1](https://cblop.github.io/clojure-dojo-1)
+
+![Default-aligned-image](img/Clojure-Logo.png)
+
+---
+layout: false
+# Matt Thompson
+
+- EngD student at Bath/Sysemia ltd
+- Researching procedural narratives in games
+- Love tinkering with odd languages
+
+---
+
+class: center, middle, inverse
+
+# What is it, and why should I care?
+
+---
+
+# Clojurescript: what is it?
+
+- Compiles to Javascript
+- Dialect of Lisp (Clojure)
+- Can use JS libraries
+- Uses Google's closure (not Clojure) compiler
+
+---
+class: center, middle, inverse
+
+# What's Clojure, then?
+
+---
+# Clojure
+
+- It's a dialect of Lisp
+- It runs on the JVM (Java Virtual Machine)
+- Can use Java libraries
+- Encourages *immutable* data structures
+- This makes it ideal for concurrency
+- Very simple syntax
+
+---
+class: inverse
+# Clojure example
+
+    (defn my-function [x y]
+        (let [xs (* x x) ys (* y y)]
+            (Math/sqrt (+ xs ys))))
+
+---
+
+class: inverse
+# Clojure example
+
+    (defn my-function [x y]
+        (let [xs (* x x) ys (* y y)]
+            (Math/sqrt (+ xs ys))))
+
+    var my-function = function(x, y) {
+        var xs = x * x;
+        var ys = y * y;
+        return sqrt(xs + ys);
+    }
+
+---
+class: center, middle, inverse
+
+# It's a tree!
+![Default-aligned-image](img/tree-dark.png)
+
+---
+
+class: center, middle, inverse
+
+# Syntax time!
+
+---
+class: center, middle, inverse
+
+# What macros do
+![Default-aligned-image](img/macro.png)
+
+---
+
+# Light Table
+
+- A new editor written in Clojurescript
+- Inspired by a talk called "[Inventing on Principle](vimeo.com/36579366)" by Bret Victor
+- Built for "live coding"
+- In very early alpha
+- Also supports JS, Python (right now), but is designed for Clojure(script)
+- Supports source maps!
+
+---
+class: center, middle, inverse
+
+# Let's make a game!
+
+---
+
+# CLJS Live Game Demo
+
+- This demo was made by Chris Granger, creator of Light Table
+- Play with it online at [bristolclojure.herokuapp.com](http://bristolclojure.herokuapp.com)
+- Hack at the code: [github.com/cblop/live-cljs](https://github.com/cblop/live-cljs)
+
+---
+
+# Challenges
+
+- Change the colours of the ball and blocks
+- Change the ball to something else
+- Make the ball (or whatever) shoot lasers
+- ...etc
+
+---
+class: center, middle, inverse
+
+# Now for something a bit more advanced
+
+---
+
+# Entity-Component-System
+
+- Composition instead of inheritance
+- Attempts to avoid complex class hierarchies
+- Defines functionality through separate components
+- Each game object is defined by a bunch of components
+
+---
+
+# Entity-Component-System
+
+- Entity: just a unique ID and a list of components
+- Component: describes a piece of behaviour/appearance/functionality. Only holds data, no methods
+- System: kind of like a draw/update loop, but runs on every entity with a matching component to that system
+
+---
+
+# Example: collision detection
+
+- Entities: a bunch of unique IDs with components
+- Components: (e.g physical and visible)
+- System: iterates through all entities that have a physical component, detects collisions, generates events
+- Other examples: drawing, damage, sound, etc
+
+---
+
+# Chocolatier game engine
+
+- Clojurescript running the pixi.js rendering engine
+- Entity-Component-System design
+- [github.com/alexkehayias/chocolatier](https://github.com/alexkehayias/chocolatier)
+
+---
+
+# Challenges
+
+- get it running!
+- live update the bunny's speed
+- change the bunny to something else
+- implement ground, gravity
+- get the bunny to jump
+
+---
+
+class: middle, inverse
+
+# Questions
+
+- Slides online at [cblop.github.io/clojure-dojo-1](https://cblop.github.io/clojure-dojo-1)
+- Web: [bristolclojurians.org](http://bristolclojurians.org)
+- Group: [https://groups.google.com/forum/#!forum/bristolclojurians](https://groups.google.com/forum/#!forum/bristolclojurians)
+- Twitter: [@BristolClojure](http://twitter.com/BristolClojure)
+
+
+    </textarea>
+      <script src="js/remark-0.6.0.min.js" type="text/javascript">
+    </script>
+      <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+      <script src="js/remark.language.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'clojure'
+        }) ;
+    </script>
+  </body>
+</html>
