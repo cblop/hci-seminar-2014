@@ -1,4 +1,3 @@
-
 class: center, middle, inverse
 layout: true
 
@@ -11,15 +10,6 @@ Slides: [cblop.github.io/hci-seminar-2014](https://cblop.github.io/hci-seminar-2
 <!-- ![Default-aligned-image](img/punchJudy.png) -->
 
 ---
-layout: false
-# Sysemia Ltd
-
-- EngD at Bath/Sysemia ltd
-- Background in Aerospace, knowledge management
-- Specialists in Semantic Web
-- Diversifying into media
-
----
 class: center, middle, inverse
 
 # Generative and interactive narratives
@@ -30,13 +20,7 @@ class: center, middle, inverse
 - No pre-written story or narrative exists.
 - The narrative emerges as a result of a series of complex interactions in the game.
 - This tends to happen in sandbox-style, open-world games
-- Examples: Civilisation, Dwarf Fortress, some MMORPGs
-
----
-class: inverse, center
-## Generative example: Civilisation
-
-<!-- screenshot -->
+- Examples: Minecraft, Civilisation, Dwarf Fortress
 
 ---
 
@@ -44,12 +28,8 @@ class: inverse, center
 
 - The narrative is pre-written with several branches
 - Player's interactions decide which branches play out
-
----
-class: inverse, center
-## Interactive example: Choose Your Own Adventure
-
-<!-- screenshot -->
+- Usually implemented as multiple endings in games
+- Examples: Choose Your Own Adventure, Mass Effect, RPG games
 
 ---
 class: inverse, center, middle
@@ -60,18 +40,23 @@ class: inverse, center, middle
 # Galatea
 
 - interactive fiction/text adventure
+- one character, one room
+- story emerges from conversation
 
 ---
-# Facade (fix the c!)
+# Façade
 
 - created by Mateus and Stern at Georgia Tech
+- only one room, two (other) characters
+- interact by typing in natural language sentences
+
 
 <!-- fix this -->
 .footnote[Mateus and Stern: Facade An Experiment in Building a Fully-Realized Interactive Drama}]
 
 ---
 
-# Facade Video
+# Façade Video
 
 <!-- fix the c, embed a video here -->
 
@@ -82,16 +67,18 @@ class: center, middle, inverse
 # How do you model a narrative?
 
 ---
-class: inverse, center
+class: center, middle, inverse
 ## Kurt Vonnegut: Shapes of stories
 
-<!-- pictures here -->
+background-image: url(img/shapes.png)
 
 ---
 
 # Vladimir Propp
 
-- split Russian folk tales into components
+- created a formalism for Russian folk tales
+- split stories into often used components
+- generalises to other stories quite well
 
 ---
 class: center, middle, inverse
@@ -113,12 +100,15 @@ Three layers:
 # How Facade does it
 
 - Based on OZ project drama manager
-- (... etc)
+- Dramatic elements are divided into 'beats'
+- ...etc
 
 ---
 class: center, middle, inverse
 
 # That's the way to do it!
+class: center, middle, inverse
+background-image: url(img/punchjudy.png)
 
 ---
 
@@ -130,7 +120,6 @@ class: center, middle, inverse
 - Characters are pretty simple
 
 ---
-
 class: middle, inverse
 
 # Questions
